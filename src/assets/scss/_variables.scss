@@ -1,0 +1,15 @@
+$matt-black: rgb(21, 21, 21);
+$white: rgb(255 255 255);
+$white-edgar: rgb(237 237 237);
+$white-smoke: rgb(245 245 245);
+$bank-valut: rgb(116 116 116);
+$christmas-silvar: rgb(224 224 224);
+$display-none: none !important;
+$display-flex: flex !important;
+$display-block: block !important;
+
+@mixin flex-content-item-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

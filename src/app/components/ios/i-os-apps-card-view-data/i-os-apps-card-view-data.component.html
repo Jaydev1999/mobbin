@@ -1,0 +1,30 @@
+<div class="card-data-main">
+    <section class="show-card-data">
+        <div class="show-icon">
+            <img [src]="showCardIcon" class="img-fluid">
+        </div>
+        <div class="show-title" [innerHTML]="showCardTitle">
+        </div>
+        <div class="show-title-span" [innerHTML]="showCardSpan">
+        </div>
+        <cite class="show-card-cpy not-italic" [innerHTML]="showCardCpy">
+        </cite>
+        <div class="card-category-company">
+            <div>
+                <h2 class="app-category">App Category</h2>
+                <a class="app-category-title">
+                    <span [innerHTML]="showCardCategory">
+                    </span>
+                </a>
+            </div>
+            <div class="company-div">
+                <h2 class="company-hq">Company HQ</h2>
+                <a class="company-country">
+                    <span [innerHTML]="showCardCompanyHQ">
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section></section>
+</div>

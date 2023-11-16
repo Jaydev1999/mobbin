@@ -1,0 +1,24 @@
+<article class="card-tree-main">
+    <section class="card-flow-section" *ngFor="let flowTreeData of flowTreeAndroid; index as i"
+        [attr.id]="flowTreeData.flowTreeTitle">
+        <div class="card-flow-main">
+            <div class="card-flow-header">
+                <div class="card-title-data">
+                    <span (click)="openSection(flowTreeData.flowTreeTitle)" class="header-title"
+                        [innerHTML]="flowTreeData.flowTreeTitle"></span>
+                    <span *ngIf="flowTreeData.prevData">from</span>
+                    <button class="header-title" *ngIf="flowTreeData.prevData" [innerHTML]="flowTreeData.prevData"
+                        (click)="showSection(flowTreeData.prevData)"></button>
+                </div>
+                <a class="screen-count">{{ flowTreeData.images.length }} screens</a>
+            </div>
+            <div class="card-options-button">
+            </div>
+        </div>
+        <div class="flow-images-part">
+            <div class="flow-img" *ngFor="let imagePath of flowTreeData.images">
+                <img [src]="imagePath" alt="Image">
+            </div>
+        </div>
+    </section>
+</article>

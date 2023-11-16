@@ -1,0 +1,105 @@
+.flow-main-section {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  overflow: scroll;
+  position: sticky;
+  top: 7rem;
+}
+.flow-main-section::-webkit-scrollbar {
+  display: none;
+}
+.flow-main-section section {
+  max-height: calc(100vh - 4rem - 4rem);
+}
+.flow-tree-title {
+  display: block;
+  color: rgb(152 152 152);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.flow-tree-ul {
+  align-items: stretch;
+  flex-direction: column;
+  user-select: none;
+  display: flex;
+  span {
+    align-items: stretch;
+    flex-direction: column;
+    display: inline-flex;
+  }
+  li {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.008em;
+    font-weight: 500;
+    padding-left: 12px;
+    padding-right: 12px;
+    // column-gap: 8px;
+    align-items: center;
+    height: 36px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+  }
+}
+.flow-tree-li {
+  font-size: 14px;
+  column-gap: 8px;
+
+  line-height: 20px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+  padding-left: 12px;
+  padding-right: 12px;
+  // column-gap: 8px;
+  align-items: center;
+  height: 36px;
+  display: flex;
+  position: relative;
+  .sub-title {
+    color: rgb(21 21 21);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1;
+    // margin-left: 8px;
+  }
+  .sub-count {
+    color: rgb(152 152 152);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.024em;
+    font-weight: 400;
+  }
+}
+.line-div {
+  align-self: stretch;
+  column-gap: 8px;
+  align-items: stretch;
+  display: flex;
+}
+.line-left {
+  border-color: rgb(152 152 152);
+  border-left-width: 1px;
+  align-items: center;
+  width: 12px;
+  height: 100%;
+  display: flex;
+}
+.line-center {
+  border-color: rgb(152 152 152);
+  border-bottom-width: 1px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+.activeList{
+  color: rgb(24 160 251)!important;
+}

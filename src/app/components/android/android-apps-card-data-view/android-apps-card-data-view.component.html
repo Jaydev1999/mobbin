@@ -1,0 +1,74 @@
+<div class="card-data-main">
+    <section class="show-card-data">
+        <div class="show-icon">
+            <img [src]="showCardIcon" class="img-fluid">
+        </div>
+        <div class="show-title" [innerHTML]="showCardTitle">
+        </div>
+        <div class="show-title-span" [innerHTML]="showCardSpan">
+        </div>
+        <cite class="show-card-cpy not-italic" [innerHTML]="showCardCpy">
+        </cite>
+        <div class="card-category-company">
+            <div>
+                <h2 class="app-category">App Category</h2>
+                <a class="app-category-title">
+                    <span [innerHTML]="showCardCategory">
+                    </span>
+                </a>
+            </div>
+            <div class="company-div">
+                <h2 class="company-hq">Company HQ</h2>
+                <a class="company-country">
+                    <span [innerHTML]="showCardCompanyHQ">
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="version-year">
+    <div class="year-button">
+        <div class="year-button-div" [ngClass]="{ 'active': activeButton === 'Aug 2023' }"
+            (click)="onButtonClick('Aug 2023')">
+            <button class="year-btn">Aug 2023</button>
+        </div>
+        <div class="year-button-div" [ngClass]="{ 'active': activeButton === 'Oct 2022' }"
+            (click)="onButtonClick('Oct 2022')">
+            <button class="year-btn">Oct 2022</button>
+        </div>
+    </div>
+
+    <div class="btn-request-content">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+            <title>plus icon</title>
+            <path d="M8 3.33337V12.6667" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M3.3335 8H12.6668" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span>Request new content</span>
+    </div>
+</section>
+<section class="screen__types">
+    <div class="screen_types_items" [class.screen_types]="screen_types === 1" (click)="screen__types(1);">
+        <div class="screen__types-heading">Flows</div>
+        <div class="screen__types-divider"></div>
+        <span class="screen__types-span">72</span>
+    </div>
+    <div class="screen_types_items" [class.screen_types]="screen_types === 2" (click)="screen__types(2);">
+        <div class="screen__types-heading">Screens</div>
+        <div class="screen__types-divider"></div>
+        <span class="screen__types-span">366</span>
+    </div>
+</section>
+<app-filters></app-filters>
+<article class="flow-tree-filter">
+    <section class="flow-tree-main">
+        <app-flow-tree></app-flow-tree>
+    </section>
+    <section class="flow-images">
+        <div class="flow-title-images">
+            <app-flows-screen-android></app-flows-screen-android>
+        </div>
+    </section>
+</article>

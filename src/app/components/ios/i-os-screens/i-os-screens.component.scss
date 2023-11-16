@@ -1,0 +1,118 @@
+@import "../../../../assets/scss/variables";
+.ios__screens__main-div {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0rem, 1fr));
+  align-content: start;
+  gap: 2.5rem 1.5rem;
+  padding-top: 0rem;
+}
+.ios__screens__main {
+  row-gap: 16px;
+  flex-direction: column;
+  display: flex;
+}
+.ios__screens-item {
+  position: relative;
+}
+.ios__screens-item img {
+  border-radius: 1.5625rem;
+}
+.select-img-button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 624.9375rem;
+  border-width: 0.1875rem;
+  background-color: transparent;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  border: 0.1875rem solid rgb(224 224 224);
+}
+
+.select-more-button {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255 255 255);
+  cursor: pointer;
+}
+.ios__screens-shareing {
+  display: grid;
+  column-gap: 0.75rem;
+  justify-items: stretch;
+  grid-auto-flow: column;
+  right: 1.25rem;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  position: absolute;
+}
+.ios__screens-btn-copy,
+.ios__screens-btn-save {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: rgb(255 255 255);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.008em;
+    font-weight: 500;
+    color: rgb(21 21 21);
+  }
+}
+.ios__screens-item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.5625rem;
+  background: linear-gradient(
+    rgba(21, 21, 21, 0.5) 0%,
+    rgba(21, 21, 21, 0) 20.83%,
+    rgba(21, 21, 21, 0) 79.17%,
+    rgba(21, 21, 21, 0.5) 100%
+  );
+}
+.ios__screens-buttons {
+  display: none;
+}
+.ios__screens-item:hover .ios__screens-buttons {
+  display: block;
+}
+
+.ios__screens-product-detail {
+  column-gap: 8px;
+  align-items: center;
+  flex-direction: row;
+  min-width: 0;
+  display: inline-flex;
+  img {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.75rem;
+  }
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.008em;
+    font-weight: 500;
+    color: rgb(21 21 21);
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

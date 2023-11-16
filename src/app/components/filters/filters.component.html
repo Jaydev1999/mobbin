@@ -1,0 +1,41 @@
+<section class="filter__section-main">
+    <div class="filter-section">
+        <div class="filter-section-main">
+            <div (click)="toggleNav()" class="btn-filters" [ngClass]="{ open: isNavOpen, close: !isNavOpen }">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <title>icon</title>
+                    <ng-container *ngIf="isNavOpen">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            stroke="currentColor">
+                            <title>chevron left icon</title>
+                            <path d="M10 12L6 8L10 4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </ng-container>
+                    <ng-container *ngIf="!isNavOpen">
+                        <path d="M4 8L12 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M2 4H14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M6 12L10 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </ng-container>
+                </svg>
+                Filters
+            </div>
+            <div class="btn-add-filters" (click)="expandInput()" (blur)="resetInput()">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" [attr.stroke]="svgStrokeColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title>plus icon</title>
+                    <path d="M8 3.33337V12.6667" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path d="M3.3335 8H12.6668" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+                <div class="input">
+                    <input type="text" name="search" id="filterInput" [placeholder]="placeholderText" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

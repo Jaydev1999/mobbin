@@ -1,0 +1,96 @@
+<app-nav-bar></app-nav-bar>
+<article class="card-tabs">
+    <section class="card-data">
+        <section class="card-data-back">
+            <button (click)="goToBack()">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    stroke="currentColor" class="shrink-0">
+                    <title>arrow left icon</title>
+                    <path d="M12.6666 8H3.33331" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path d="M7.99998 12.6667L3.33331 8.00001L7.99998 3.33334" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </section>
+        <section class="card-data-device-platform">
+            <div class="device-platform-name">
+                <button [class.device_platform-active]="device_platform === ScreenTypeEnum.IOS"
+                    (click)="versionActive(ScreenTypeEnum.IOS); updateRouterLink(ScreenTypeEnum.IOS)">
+                    iOS
+                </button>
+            </div>
+            <div class="device-platform-name">
+                <button [class.device_platform-active]="device_platform === ScreenTypeEnum.ANDROID"
+                    (click)="versionActive(ScreenTypeEnum.ANDROID); updateRouterLink(ScreenTypeEnum.ANDROID)">
+                    Android
+                </button>
+            </div>
+        </section>
+        <section class="save-options">
+            <button class="save-button">
+                Save
+            </button>
+            <button class="more-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+                    <title>more icon</title>
+                    <path
+                        d="M8.00016 8.66671C8.36835 8.66671 8.66683 8.36823 8.66683 8.00004C8.66683 7.63185 8.36835 7.33337 8.00016 7.33337C7.63197 7.33337 7.3335 7.63185 7.3335 8.00004C7.3335 8.36823 7.63197 8.66671 8.00016 8.66671Z"
+                        stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M12.6667 8.66671C13.0349 8.66671 13.3333 8.36823 13.3333 8.00004C13.3333 7.63185 13.0349 7.33337 12.6667 7.33337C12.2985 7.33337 12 7.63185 12 8.00004C12 8.36823 12.2985 8.66671 12.6667 8.66671Z"
+                        stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M3.33317 8.66671C3.70136 8.66671 3.99984 8.36823 3.99984 8.00004C3.99984 7.63185 3.70136 7.33337 3.33317 7.33337C2.96498 7.33337 2.6665 7.63185 2.6665 8.00004C2.6665 8.36823 2.96498 8.66671 3.33317 8.66671Z"
+                        stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <ng-container>
+                <div *ngIf="device_platform === ScreenTypeEnum.IOS" class="download-device-option">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
+                            fill="currentColor" stroke="none" class="h-20 w-20 text-fg-inversed m-8">
+                            <title>apple icon</title>
+                            <path
+                                d="M15.5905 10.6359C15.6104 9.09202 16.4396 7.63115 17.7549 6.82249C16.9251 5.6374 15.5352 4.88602 14.0892 4.84078C12.5469 4.67889 11.0518 5.76366 10.2658 5.76366C9.46471 5.76366 8.25465 4.85685 6.95163 4.88366C5.25319 4.93853 3.66982 5.90417 2.84349 7.38906C1.06722 10.4644 2.39216 14.9841 4.09368 17.47C4.94499 18.6873 5.93992 20.047 7.24177 19.9988C8.51571 19.9459 8.99151 19.1864 10.5293 19.1864C12.0527 19.1864 12.4991 19.9988 13.8274 19.9681C15.1944 19.9459 16.0557 18.7454 16.8771 17.5166C17.4888 16.6493 17.9594 15.6907 18.2717 14.6763C16.6652 13.9969 15.5924 12.3802 15.5905 10.6359Z">
+                            </path>
+                            <path
+                                d="M13.0816 3.20595C13.827 2.31119 14.1942 1.16113 14.1053 0C12.9666 0.1196 11.9147 0.663834 11.1593 1.52426C10.4206 2.36494 10.0362 3.49477 10.1088 4.61152C11.248 4.62325 12.3678 4.09376 13.0816 3.20595Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <div class="download-button">
+                        <div class="download-logo-txt">
+                            Download on the
+                        </div>
+                        <div class="download-platform">App Store</div>
+                    </div>
+                </div>
+                <div *ngIf="device_platform === ScreenTypeEnum.ANDROID" class="download-device-option">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
+                            fill="currentColor" stroke="none" class="h-20 w-20 text-fg-inversed m-8">
+                            <title>play store icon</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.09978 0.753207C1.0351 0.938693 1 1.15571 1 1.40126V18.5983C1 18.8443 1.03513 19.0614 1.09987 19.2469L10.4237 9.99942L1.09978 0.753207ZM1.8031 19.9578C2.13541 20.0533 2.54741 19.9893 2.99244 19.739L13.9937 13.5396L11.1338 10.7036L1.8031 19.9578ZM14.8998 13.0299L18.2835 11.1234C19.3789 10.5052 19.3789 9.49512 18.2835 8.87772L14.8981 6.97008L11.8438 9.99936L14.8998 13.0299ZM13.9925 6.4598L2.99244 0.261327C2.54741 0.0105396 2.13539 -0.0533572 1.80308 0.0423073L11.1337 9.2952L13.9925 6.4598Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <div class="download-button">
+                        <div class="download-logo-txt">
+                            Get it on
+                        </div>
+                        <div class="download-platform">Google Play</div>
+                    </div>
+                </div>
+            </ng-container>
+        </section>
+    </section>
+    <section *ngIf="device_platform === ScreenTypeEnum.IOS">
+        <app-i-os-apps-card-view-data></app-i-os-apps-card-view-data>
+    </section>
+    <section *ngIf="device_platform === ScreenTypeEnum.ANDROID">
+        <app-android-apps-card-data-view></app-android-apps-card-data-view>
+    </section>
+</article>

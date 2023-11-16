@@ -1,0 +1,13 @@
+export enum ScreenTypeEnum {
+  IOS,
+  ANDROID,
+  IOS_APPS,
+  IOS_SCREEN,
+  IOS_FLOWS,
+  ANDROID_APPS,
+  ANDROID_SCREEN,
+  ANDROID_FLOWS,
+  WEB_APPS,
+  WEB_SCREEN,
+  WEB_FLOWS,
+}

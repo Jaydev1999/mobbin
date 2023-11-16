@@ -1,0 +1,117 @@
+@import "../../../assets/scss/variables";
+
+button {
+  background: none;
+  cursor: pointer;
+}
+.card-data {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+.card-tabs {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+}
+.card-data-back button {
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.card-data-back button:hover {
+  background-color: rgb(245 245 245);
+}
+.card-data-device-platform {
+  display: flex;
+}
+.device-platform-name {
+  border-radius: 8px;
+  button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.016em;
+    font-weight: 600;
+    color: rgb(152 152 152);
+  }
+  .device_platform-active {
+    color: black;
+  }
+}
+.device-platform-name:hover {
+  background-color: rgb(237, 237, 237);
+}
+.save-button {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: rgb(255 255 255);
+  background-color: rgb(21 21 21);
+  border-radius: 12px;
+  height: 36px;
+}
+.more-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(237 237 237);
+  border-radius: 12px;
+  height: 36px;
+  @include flex-content-item-center;
+}
+.download-device-option {
+  padding-right: 12px;
+  background-color: rgb(21 21 21);
+  border-radius: 12px;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  span svg {
+    color: rgb(255 255 255);
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+  }
+}
+.download-logo-txt {
+  color: rgb(255 255 255);
+  font-size: 8px;
+  line-height: 12px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+}
+.download-platform {
+  color: rgb(255 255 255);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+.save-options {
+  gap: 12px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  justify-content: end;
+  flex-direction: row;
+  display: flex;
+}
+.download-button {
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}

@@ -1,0 +1,103 @@
+@import "../../../../assets/scss/variables";
+.card-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  .card-logo-img {
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.75rem;
+  }
+  .card-content-image {
+    border-radius: 1.0575rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.1875rem 0.1875rem 0rem;
+  }
+  .card-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+  }
+  .card-header-part {
+    column-gap: 1rem;
+  }
+  .header-title-part {
+    display: flex;
+    align-items: center;
+    column-gap: 0.75rem;
+  }
+  .card-header-title {
+    column-gap: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.008em;
+    font-weight: 600;
+    text-overflow: ellipsis;
+  }
+  .card-header-badge {
+    color: $white;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: rgb(62 207 142);
+    border-radius: 0.375rem;
+    display: inline-flex;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards-option {
+    display: flex;
+    column-gap: 0.75rem;
+  }
+  .card-header-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.024em;
+    font-weight: 400;
+    color: $bank-valut;
+  }
+  .btn-save {
+    background-color: $matt-black;
+    color: $white;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.008em;
+    font-weight: 500;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    border: 0 solid;
+    height: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-more-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    background-color: $white-edgar;
+    border-radius: 0.75rem;
+    border: 0 solid;
+    cursor: pointer;
+    height: 2.25rem;
+  }
+  .cards-option {
+    visibility: hidden;
+  }
+  .card-main:hover {
+    .card-header-title {
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+    .cards-option {
+      visibility: visible;
+    }
+  }

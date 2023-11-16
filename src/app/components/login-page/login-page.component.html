@@ -1,0 +1,133 @@
+<main>
+    <div class="login_page-main d-flex">
+        <section class="login_main-left">
+            <div class="login_main">
+                <div class="login-mobbin-icon">
+                    <svg width="128" height="60" viewBox="0 0 128 60" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg" class="h-24 self-center">
+                        <title>Mobbin</title>
+                        <path d="M128 28H96V60H128V28Z"></path>
+                        <path d="M0 59.9998V31.8268L31.8268 0H59.9998V28.1731L28.1731 59.9998H0Z"></path>
+                        <path d="M48 59.9998V31.8268L79.8268 0H108V28.1731L76.1731 59.9998H48Z"></path>
+                    </svg>
+                </div>
+                <div class="loign-welcome-title">
+                    <h2>
+                        Welcome back
+                    </h2>
+                </div>
+                <section class="login-bottom">
+                    <section class="login-button-option-div">
+                        <button class="login-button-option">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+                                    <g clip-path="url(#clip0_9_516)">
+                                        <path
+                                            d="M19.8052 10.2304C19.8052 9.55059 19.7501 8.86714 19.6325 8.19839H10.2002V12.0492H15.6016C15.3775 13.2912 14.6573 14.3898 13.6027 15.088V17.5866H16.8252C18.7176 15.8449 19.8052 13.2728 19.8052 10.2304Z"
+                                            fill="#4285F4"></path>
+                                        <path
+                                            d="M10.1999 20.0007C12.897 20.0007 15.1714 19.1151 16.8286 17.5866L13.6061 15.0879C12.7096 15.6979 11.5521 16.0433 10.2036 16.0433C7.59474 16.0433 5.38272 14.2832 4.58904 11.9169H1.26367V14.4927C2.96127 17.8695 6.41892 20.0007 10.1999 20.0007V20.0007Z"
+                                            fill="#34A853"></path>
+                                        <path
+                                            d="M4.58565 11.9169C4.16676 10.675 4.16676 9.33011 4.58565 8.08814V5.51236H1.26395C-0.154389 8.33801 -0.154389 11.6671 1.26395 14.4927L4.58565 11.9169V11.9169Z"
+                                            fill="#FBBC04"></path>
+                                        <path
+                                            d="M10.1999 3.95805C11.6256 3.936 13.0035 4.47247 14.036 5.45722L16.8911 2.60218C15.0833 0.904587 12.6838 -0.0287217 10.1999 0.000673888C6.41892 0.000673888 2.96127 2.13185 1.26367 5.51234L4.58537 8.08813C5.37538 5.71811 7.59107 3.95805 10.1999 3.95805V3.95805Z"
+                                            fill="#EA4335"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_9_516">
+                                            <rect width="20" height="20" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>
+                                    Continue with Google
+                                </span>
+                            </span>
+                        </button>
+                        <button *ngIf="seeOtherHide" (click)="showOtheroption()" class="login-button-option">
+                            <span>
+                                See other options
+                            </span>
+                        </button>
+                        <div class="other_option-show" *ngIf="otherOptionShow">
+                            <button class="login-button-option">
+                                <span>
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+                                        <g clip-path="url(#clip0_9_612)">
+                                            <path
+                                                d="M20.5 10C20.5 4.47715 16.0229 0 10.5 0C4.97715 0 0.5 4.47715 0.5 10C0.5 14.9912 4.15684 19.1283 8.9375 19.8785V12.8906H6.39844V10H8.9375V7.79688C8.9375 5.29063 10.4305 3.90625 12.7146 3.90625C13.8084 3.90625 14.9531 4.10156 14.9531 4.10156V6.5625H13.6922C12.45 6.5625 12.0625 7.3334 12.0625 8.125V10H14.8359L14.3926 12.8906H12.0625V19.8785C16.8432 19.1283 20.5 14.9912 20.5 10Z"
+                                                fill="#1877F2"></path>
+                                            <path
+                                                d="M14.3926 12.8906L14.8359 10H12.0625V8.125C12.0625 7.33418 12.45 6.5625 13.6922 6.5625H14.9531V4.10156C14.9531 4.10156 13.8088 3.90625 12.7146 3.90625C10.4305 3.90625 8.9375 5.29063 8.9375 7.79688V10H6.39844V12.8906H8.9375V19.8785C9.97287 20.0405 11.0271 20.0405 12.0625 19.8785V12.8906H14.3926Z"
+                                                fill="white"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_9_612">
+                                                <rect width="20" height="20" fill="white" transform="translate(0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>
+                                        Facebook
+                                    </span>
+                                </span>
+                            </button>
+                            <button class="login-button-option">
+                                <span>
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+                                        <g clip-path="url(#clip0_9_617)">
+                                            <path
+                                                d="M6.7896 18.1256C14.3368 18.1256 18.4648 11.8728 18.4648 6.45038C18.4648 6.27278 18.4648 6.09598 18.4528 5.91998C19.2559 5.33911 19.9491 4.61989 20.5 3.79598C19.7512 4.12798 18.9567 4.34561 18.1432 4.44158C18.9998 3.92882 19.641 3.12224 19.9472 2.17198C19.1417 2.64999 18.2605 2.98684 17.3416 3.16798C16.7229 2.51013 15.9047 2.07452 15.0135 1.92855C14.1223 1.78259 13.2078 1.93441 12.4116 2.36053C11.6154 2.78664 10.9819 3.46329 10.609 4.28577C10.2361 5.10825 10.1446 6.0307 10.3488 6.91038C8.71741 6.82855 7.12146 6.40458 5.66455 5.66599C4.20763 4.9274 2.9223 3.8907 1.892 2.62318C1.36727 3.52651 1.20656 4.59587 1.44258 5.61353C1.67861 6.6312 2.29362 7.52064 3.1624 8.10078C2.50936 8.08165 1.87054 7.90548 1.3 7.58718V7.63918C1.30026 8.58656 1.62821 9.50468 2.22823 10.2378C2.82824 10.971 3.66338 11.474 4.592 11.6616C3.9879 11.8264 3.35406 11.8504 2.7392 11.732C3.00151 12.5473 3.51202 13.2602 4.19937 13.7711C4.88671 14.282 5.71652 14.5654 6.5728 14.5816C5.72203 15.2503 4.74776 15.7447 3.70573 16.0366C2.66369 16.3284 1.57435 16.4119 0.5 16.2824C2.37653 17.4866 4.55994 18.1253 6.7896 18.1224"
+                                                fill="#1DA1F2"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_9_617">
+                                                <rect width="20" height="20" fill="white" transform="translate(0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>
+                                        Twitter
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </section>
+                    <div class="or-section">
+                        <hr>
+                        <h3>or</h3>
+                        <hr>
+                    </div>
+                    <section class="email_login-option">
+                        <div class="email_login-input">
+                            <input type="text" placeholder="Enter email address">
+                        </div>
+                        <div class="email-continue">
+                            <button>
+                                Continue
+                            </button>
+                        </div>
+                        <div class="login-agreement">
+                            <p>
+                                By continuing, you agree to Mobbin's <a href="">Terms of Service</a> and <a
+                                    href="">Privacy
+                                    Policy</a> .
+                            </p>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+        <section class="login_main-right">
+            <img src="https://mobbin.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fauth_panel.68ce2ca9.png&w=2160&q=75"
+                alt="login_main-right-img">
+        </section>
+    </div>
+</main>

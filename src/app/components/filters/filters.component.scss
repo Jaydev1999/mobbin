@@ -1,0 +1,65 @@
+@import "../../../assets/scss/variables";
+
+.filter-section-main {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.filter__section-main {
+  position: sticky;
+  top: 4rem;
+  // backdrop-filter: blur(0.5rem) brightness(0) contrast(0) grayscale(0)
+  //   hue-rotate(0) invert(0) opacity(0) saturate(0) sepia(0);
+  // background-color: hsla(0, 0%, 100%, 0.9);
+  background-color: rgb(255 255 255);
+  border-color: transparent;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  z-index: 5;
+  margin-top: -12px;
+  margin-bottom: -12px;
+}
+.btn-add-filters,
+.btn-filters {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: $white-edgar;
+  border-radius: 0.75rem;
+  column-gap: 0.5rem;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  cursor: pointer;
+}
+.btn-add-filters {
+  background-color: transparent;
+  color: rgb(152 152 152);
+}
+.btn-add-filters:hover {
+  background-color: $white-smoke;
+}
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-add-filters .input input {
+  width: 4.125rem;
+  transition: width 0.2s;
+  border: 0;
+  background-color: transparent;
+}
+.btn-add-filters .input input:focus {
+  width: 15rem !important;
+}
+.btn-add-filters .input input:hover {
+  cursor: text;
+}
+.btn-add-filters .input input:focus {
+  outline: 0;
+}

@@ -1,0 +1,104 @@
+@import "../../../../assets/scss/variables";
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+.show-card-data {
+  padding-top: 32px;
+  justify-items: center;
+  grid-template-rows: auto 32px auto 24px auto 24px auto 32px auto;
+  display: grid;
+}
+.show-icon img {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: rgb(245 245 245);
+  border-radius: 40px !important;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+}
+.show-title {
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.024em;
+  font-weight: 600;
+  text-align: center;
+  grid-row-start: 3;
+}
+.show-title-span {
+  color: rgb(116 116 116);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.024em;
+  font-weight: 400;
+  text-align: center;
+  grid-row-start: 5;
+}
+.show-card-cpy {
+  color: rgb(152 152 152);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.024em;
+  font-weight: 400;
+  text-align: center;
+  grid-row-start: 7;
+}
+.card-category-company {
+  border-color: rgb(237 237 237);
+  border-width: 2px;
+  border-radius: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 320px;
+  display: grid;
+  grid-row-start: 9;
+}
+.app-category,
+.company-hq {
+  color: rgb(152 152 152);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+}
+.card-category-company div {
+  padding: 16px;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+.app-category-title,
+.company-country {
+  color: rgb(21 21 21);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.008em;
+  font-weight: 500;
+  background-color: rgb(237 237 237);
+  border-radius: 6px;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: row;
+  user-select: none;
+  height: 24px;
+  display: inline-flex;
+  span {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-column-gap: 4px;
+    column-gap: 4px;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    display: flex;
+  }
+}
+.company-div {
+  border-left: 2px solid rgb(237 237 237);
+}

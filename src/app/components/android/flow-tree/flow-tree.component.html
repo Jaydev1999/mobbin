@@ -1,0 +1,23 @@
+<article class="flow-main-section">
+    <section>
+        <span class="flow-tree-title">Flow Tree</span>
+        <ul class="flow-tree-ul">
+            <ng-container *ngFor="let item of flowTreeAndroid; index as i">
+                <li class="flow-tree-li" (click)="selectedTitle(i)">
+                    <!-- <div class="line-div"> -->
+                    <ng-container *ngIf="item.VRline !== 0">
+                        <div class="line-left" *ngFor="let i of createVRline(item.VRline - 1)">
+                        </div>
+                        <div class="line-left">
+                            <div class="line-center"></div>
+                        </div>
+                    </ng-container>
+                    <!-- </div> -->
+                    <span class="sub-title"
+                        [ngClass]="{'activeList': selectedIndex === i}">{{item.flowTreeTitle}}</span>
+                    <span class="sub-count">{{item.images.length}}</span>
+                </li>
+            </ng-container>
+        </ul>
+    </section>
+</article>

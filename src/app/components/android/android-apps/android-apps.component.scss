@@ -1,0 +1,112 @@
+a {
+  text-decoration: none;
+}
+.android__apps-component .row {
+  row-gap: 40px;
+}
+.android__apps-img {
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 28px;
+  padding-top: 24px;
+  background-color: rgb(245 245 245);
+  border-radius: 28px;
+  img {
+    border-radius: 20.7px;
+    background-color: rgb(255 255 255);
+  }
+}
+.android__apps-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.android__apps-main {
+  position: relative;
+}
+.custom-carousel-buttons {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  right: 12px;
+  left: 12px;
+  button {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255 255 255);
+    border-radius: 12px;
+    cursor: pointer;
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+  :hover {
+    background-color: rgb(245 245 245);
+  }
+}
+.android__apps-icon img {
+  border-radius: 9999px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.android__apps-title-main {
+  display: flex;
+  column-gap: 12px;
+}
+.android__apps-footer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  .android__apps-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.008em;
+    font-weight: 500;
+    color: rgb(21 21 21);
+  }
+  .android__apps-span {
+    color: rgb(116 116 116);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.024em;
+    font-weight: 400;
+  }
+}
+
+.android__apps-collection-share {
+  display: flex;
+  column-gap: 8px;
+  .android__apps-collection {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: rgb(21 21 21);
+      border-radius: 12px;
+      cursor: pointer;
+      height: 36px;
+    }
+    :hover {
+      background-color: rgb(51 51 51);
+    }
+  }
+  .android__apps-share {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: rgb(237 237 237);
+      border-radius: 12px;
+      cursor: pointer;
+      height: 36px;
+    }
+    :hover {
+      background-color: rgb(224 224 224);
+    }
+  }
+}

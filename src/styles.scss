@@ -1,0 +1,385 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.cdnfonts.com/css/basier");
+@import "./assets/scss/variables";
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: Basier Square, sans-serif;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  scroll-behavior: auto !important;
+}
+
+body {
+  line-height: inherit;
+  // height: 100rem;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.w-16 {
+  width: 1rem;
+}
+
+.h-16 {
+  height: 1rem;
+}
+
+.w-24 {
+  width: 24px;
+}
+
+.h-24 {
+  height: 24px;
+}
+
+.w-40 {
+  width: 40px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.w-43px {
+  width: 43px;
+}
+
+.h-20 {
+  height: 20px;
+}
+
+.android__apps-main {
+  position: relative !important;
+  user-select: none;
+
+  .owl-dots {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0px !important;
+    display: flex !important;
+    column-gap: 4px !important;
+    justify-content: center;
+    bottom: 11px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+    pointer-events: none !important;
+  }
+
+  .owl-dot {
+    display: flex !important;
+    margin: 0px !important;
+    column-gap: 4px !important;
+  }
+
+  .owl-dot.active {
+    span {
+      background-color: rgb(21 21 21) !important;
+    }
+  }
+
+  .owl-dot span {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 9999px !important;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    margin: 0px !important;
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    margin: 0px !important;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    right: 12px;
+    left: 12px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+
+    div {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      background-color: rgb(255 255 255) !important;
+      border-radius: 12px !important;
+      cursor: pointer !important;
+      height: 36px !important;
+      display: flex !important;
+      align-items: center !important;
+      margin: 0px !important;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    :hover {
+      background-color: rgb(245 245 245) !important;
+    }
+  }
+
+  .disabled {
+    visibility: hidden;
+    opacity: 1;
+  }
+}
+
+.android__apps-collection-share-main {
+  display: none;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.android__apps-cards {
+  user-select: none;
+}
+
+.android__apps-cards:hover {
+  cursor: pointer !important;
+
+  .owl-nav {
+    opacity: 1;
+  }
+
+  .owl-dots {
+    opacity: 1;
+  }
+
+  .android__apps-collection-share-main {
+    display: block;
+  }
+
+  .android__apps-footer {
+    .android__apps-title {
+      text-decoration: underline;
+    }
+
+    .android__apps-span {
+      // text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+    }
+  }
+}
+
+.show-item-sm {
+  display: $display-none;
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 480px) {
+
+  /* CSS rules for mobile portrait layout */
+  .nav-contribute-main,
+  .memeber-button,
+  .show-item-lg,
+  .search-ctrl_k,
+  .navbar-collapse {
+    display: $display-none;
+  }
+
+  .show-item-sm {
+    display: $display-flex;
+  }
+
+  .show__nav-contribute div {
+    display: $display-flex;
+  }
+
+  .navbar-collapse {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .navbar_option-left {
+    align-items: center !important;
+  }
+
+  .navbar_option-main {
+    padding-right: 8px !important;
+    padding-left: 12px !important;
+  }
+
+  .hide-lg {
+    display: $display-flex;
+
+    .navbar-nav,
+    .navbar-left-option {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+      padding-right: 8px !important;
+      padding-left: 12px !important;
+    }
+  }
+
+  .search-input-lg {
+    justify-content: center !important;
+    height: 40px !important;
+  }
+
+  .home-main-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .filter__section-main {
+    display: $display-none;
+  }
+
+  .screen__types {
+    overflow: scroll;
+  }
+
+  .screen__types::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mobile Landscape */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+  /* CSS rules for mobile landscape layout */
+  .nav-contribute-main,
+  .memeber-button,
+  .show-item-lg {
+    display: $display-none;
+  }
+
+  .show-item-sm {
+    display: $display-flex;
+  }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* CSS rules for tablet portrait layout */
+  .show-item-lg,
+  .nav-contribute-main,
+  .memeber-button {
+    display: $display-none;
+  }
+
+  .show-item-sm {
+    display: $display-flex;
+  }
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+  /* CSS rules for tablet landscape layout */
+  .hide-lg {
+    display: $display-none;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+
+  /* CSS rules for desktop layout */
+  .hide-lg {
+    display: $display-none;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1920px) {
+  /* CSS rules for large desktop layout */
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin webkit-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.flow-images,
+// .flow-images-part,
+.flow-title-images {
+  overflow: scroll;
+}
+
+.flow-images,
+// .flow-images-part,
+.flow-title-images {
+  @include webkit-scrollbar;
+}
+
+.flow-images-part {
+  // @include webkit-scrollbar;
+  overflow-x: hidden;
+}
+
+.header-title:hover {
+  text-decoration: underline;
+}
+
+.header-title {
+  button {
+    background: none;
+    padding: 0;
+  }
+}
